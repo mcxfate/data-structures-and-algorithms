@@ -14,8 +14,8 @@ public class SelectionSort {
         for (Integer value : data){
             System.out.print(value+" ");
         }
-
-        selectSort04(data);
+        System.out.println();
+        selectSort01(data);
         System.out.println();
         for (Integer value : data){
             System.out.print(value+" ");
@@ -43,6 +43,7 @@ public class SelectionSort {
 
     public static void selectSort01(Integer[] data){
         int temp;
+        int count = 0;
         for (int i = 0; i < data.length - 1; i++) {
             for (int j = i + 1; j < data.length; j++) {
 
@@ -50,9 +51,11 @@ public class SelectionSort {
                     temp = data[j];
                     data[j] = data[i];
                     data[i] = temp;
+                    count++;
                 }
             }
         }
+        System.out.println(count);
         return;
     }
 
