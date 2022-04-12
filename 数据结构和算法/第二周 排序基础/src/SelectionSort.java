@@ -15,7 +15,7 @@ public class SelectionSort {
             System.out.print(value+" ");
         }
 
-        selectSort02(data);
+        selectSort04(data);
         System.out.println();
         for (Integer value : data){
             System.out.print(value+" ");
@@ -24,7 +24,7 @@ public class SelectionSort {
         Student[] students = {new Student("001","test01",49),
                                 new Student("002","test01",60),
                                 new Student("003","test01",23)};
-        selectSort03(students);
+        selectSort04(students);
         for (Student student:students){
             System.out.println(student);
         }
@@ -82,6 +82,23 @@ public class SelectionSort {
             }
             swap(data,minIndex,i);
 
+        }
+
+    }
+
+    public static <E extends Comparable<E>> void selectSort04(E[] data){
+
+        for (int i = data.length - 1; i >= 0 ; i--) {
+
+            int maxIndex = i;
+            for (int j = i; j >= 0; j--) {
+
+                if (data[j].compareTo(data[maxIndex]) > 0){
+                    maxIndex = j;
+                }
+
+            }
+            swap(data,i,maxIndex);
         }
 
     }
