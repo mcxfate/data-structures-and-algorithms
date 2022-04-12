@@ -21,6 +21,14 @@ public class SelectionSort {
             System.out.print(value+" ");
         }
         System.out.println();
+        boolean result = SortHelper.isSorted("selection",data);
+        if (result){
+            System.out.println("sorted success!");
+        }else {
+            System.out.println("sorted failed!");
+        }
+
+
         Student[] students = {new Student("001","test01",49),
                                 new Student("002","test01",60),
                                 new Student("003","test01",23)};
